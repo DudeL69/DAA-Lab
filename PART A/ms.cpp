@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int co;                       //Keep track of passes made for each kind of input
+int co;                      
 int b[100];
 
 void merge(int a[],int low,int mid,int high)
@@ -52,21 +52,21 @@ int main()
       int n;
       cout<<"Enter the number of elements: ";
       cin>>n;
-      int inc[n],dec[n],ran[n];           //Arrays in increasing,decreasing and random values
+      int inc[n],dec[n],ran[n];           
       for(int i=0;i<n;i++)
       {
-            inc[i]=i+1;                   //Array ranges from 1 to n
-            dec[i]=2*n-i;                 //Array ranges from 2n to n
-            ran[i]=rand()%25;             //Array has n random values ranging between 0 and 24
+            inc[i]=i+1;                   
+            dec[i]=2*n-i;                 
+            ran[i]=rand()%25;             
       }
       cout<<"Time complexity of"<<endl;
-      mergesort(inc,0,n-1);
+      mergesort(inc,0,n-1);               
       cout<<"Increasing order: "<<co<<endl;
-      co=0;
-      mergesort(dec,0,n-1);
+      co=0;                               
+      mergesort(dec,0,n-1);               
       cout<<"Decreasing order: "<<co<<endl;
-      co=0;
-      mergesort(ran,0,n-1);
+      co=0;                               
+      mergesort(ran,0,n-1);               
       cout<<"Random entries: "<<co<<endl;
       return 0;
 }
