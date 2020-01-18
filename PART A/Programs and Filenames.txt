@@ -1,0 +1,13 @@
+1) Merge Sort                                             ms.cpp
+2) Quick Sort                                             qs.cpp
+3) Graph traversal by BFS and DFS                         graphs.cpp
+4) a. Vertices Deletion Method                            vdm.cpp
+   b. DFS Method                                          dfs.cpp
+5) Heap Sort                                              hs.cpp
+6) Horspool's Algorithm for String Matching               sm.cpp
+7) 0/1 Knapsack problem                                   zok.cpp
+8) Minimum cost spanning tree                             prims.cpp
+9) Shortest path in a weighted graph                      dijk.cpp
+10) Subset sum                                            kadane.cpp
+11) N-Queens problem                                      nq.cpp
+12) TSP problem                                           bob.cpp
