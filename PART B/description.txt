@@ -1,0 +1,15 @@
+NUTS AND BOLTS PROBLEM:
+
+DESCRIPTION: 
+  The problem consists of two array the nuts array and bolts array having n elements each in different scrambled order.The goal is to implement a solution by which the nuts and their respective matching bolts will be mapped.
+
+IMPLEMENTATION:
+  There are two different approaches of implementing a solution to this-
+    1) Brute force approach: In this method every element from the array of nuts will be held as pivot and traversals will be made in the bolts array until the corresponding integer or character is reached. This method results in a solution having time complexity of O(n^2).
+    As a general consensus it is clear that a program with time complexity of O(n) can be converted into one with complexity O(log n) by mere partitioning. For example a linear search algorithm with complexity O(n) is converted to Binary search algorithm of time complexity O(log n) by repeated partitioning into two halves.
+    We consider the same logic to optimize our solution with complexity O(n^2) to one with complexity O(n*log n) by similar approach.
+    2) Partitioning Approach: In this method we set one element of the nuts array as our key for every pass. As such there will be n passes. For every individual pass we look for the key in the bolts array through binary search having complexity O(log n). Hence all of the passes and the searches will have a combined complexity of O(n)*O(log n), i.e. O(n*log n).
+    But one of the pre requisites of binary search algorithm is that the array elements must be sorted either in ascending order or descending order based on user convenience. If the nuts and bolts are represented by integers we use their values else if denoted by characters, we use the ASCII values for sorting.
+    Out of the various sorting algorithms like Selection Sort,Insertion Sort,Bubble sort,Merge sort,Quick sort, etc. we choose the one which has complexity O(n*log n) so that we can have the average bound(Theta Notation) defined.
+    So the most appropriate sorting algorithm would be Merge Sort or Quick Sort.
+Keeping in mind these constraint we can design a solution using Merge sort and Binary search.
