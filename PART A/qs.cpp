@@ -13,19 +13,31 @@ void swap(int *x,int *y)
 
 int partition(int arr[],int low,int high)
 {
-      int pivot=arr[high];
-      int i=low-1;
-      for(int j=low;j<high;j++)
+      int pivot=arr[low];
+      int i=low+1,j=high;
+      while(1)
       {
-            co++;
-            if(arr[j]<pivot)
+            while(arr[i]<=pivot&&i<high)
             {
                   i++;
+                  co++;
+            }
+            while(arr[j]>pivot)
+            {
+                  j--;
+                  co++;
+            }
+            if(i<j)
+            {
+                  co++;
                   swap(&arr[i],&arr[j]);
             }
+            else
+            {
+                  swap(&arr[j],&arr[low]);
+                  return j;
+            }
       }
-      swap(&arr[i+1],&arr[high]);
-      return (i+1);
 }
 
 void quicksort(int arr[],int low,int high)
