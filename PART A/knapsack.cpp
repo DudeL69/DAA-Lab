@@ -7,11 +7,11 @@ int main() {
 	int n;
 	cin >> n;
 	cout << "Enter their weights in an order: ";
-	int w[n], p[n];
-	for(int i = 0; i < n; i++)
+	int w[n+1], p[n+1];
+	for(int i = 1; i < n; i++)
 		cin >> w[i];
 	cout << "Enter their profits respectively: ";
-	for(int i = 0; i < n; i++)
+	for(int i = 1; i < n; i++)
 		cin >> p[i];
 	cout << "Enter the maximum weight permissible: ";
 	int W;
